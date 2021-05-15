@@ -66,6 +66,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => $cleardb_server,
+            'port' => env('DB_PORT', '3307'),
             'database' => $cleardb_db,
             'username' => $cleardb_username,
             'password' => $cleardb_password,
