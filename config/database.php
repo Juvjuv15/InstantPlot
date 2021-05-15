@@ -2,8 +2,6 @@
 
 return [
 
-    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-   
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
