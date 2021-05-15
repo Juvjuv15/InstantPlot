@@ -1,5 +1,16 @@
 <?php
 
+cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"] ?? null;
+$cleardb_username = $cleardb_url["user"] ?? null;
+$cleardb_password = $cleardb_url["pass"] ?? null;
+$cleardb_db = substr($cleardb_url["path"],1) ?? null;
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+
 return [
 
     'Uuid' => Webpatser\Uuid\Uuid::class,
@@ -55,7 +66,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://instantplot.herokuapp.com/'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
