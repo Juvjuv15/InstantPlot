@@ -1,7 +1,14 @@
 <?php
 
+$url = parse_url(getenv("DATABASE_URL"));
+    $host = $url["host"]?? null;
+    $username = $url["username"]?? null;
+    $password = $url["password"]?? null;
+    $database = substr($url["path"], 1)?? null;
+
 return [
 
+    
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -39,13 +46,29 @@ return [
             'prefix' => '',
         ],
 
+      /*  original mysql connection
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'us-cdbr-east-03.cleardb.com'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3307'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],*/
+
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => $host,
+            'port' => env('DB_PORT', '3307'),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
