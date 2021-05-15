@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Support\Facades\Route;
 
 
 class AppServiceProvider extends ServiceProvider
