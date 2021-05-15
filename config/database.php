@@ -4,10 +4,10 @@ $cleardb_server = $cleardb_url["host"] ?? null;
 $cleardb_username = $cleardb_url["user"] ?? null;
 $cleardb_password = $cleardb_url["pass"] ?? null;
 $cleardb_db = substr($cleardb_url["path"],1) ?? null;
-$active_group = 'default';
-$query_builder = TRUE;
+//$active_group = 'default';
+//$query_builder = TRUE;
 // Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+//$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 return [
 
