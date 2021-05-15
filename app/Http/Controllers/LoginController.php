@@ -81,7 +81,7 @@ class LoginController extends Controller
                 //             ->get();
                 $pendingLots = PendingOwnedLot::where('user_fk',$id)->where('status','=',"pending")->get();
                 $data['pendingLot']= $pendingLots;
-                // $data['lottype'] = $lottype;
+                $data['lottype'] = $lottype;
                 // $data['price'] = $price;
                 // $data['propertysold']=$sold;
                 // $data['grantedleased']=$grantedleased;
