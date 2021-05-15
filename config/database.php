@@ -3,10 +3,10 @@
 return [
 
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-    $host = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $database = substr($url["path"], 1);
+    $DB_HOST = $url["host"];
+    $DB_USERNAME = $url["username"];
+    $DB_PASSWORD = $url["password"];
+    $DB_DATABASE = substr($url["database"], 1);
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -46,7 +46,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', ''),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3307'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
