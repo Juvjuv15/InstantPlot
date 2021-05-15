@@ -3,10 +3,7 @@
 return [
 
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-    $DB_HOST = $url["host"];
-    $DB_USERNAME = $url["username"];
-    $DB_PASSWORD = $url["password"];
-    $DB_DATABASE = substr($url["database"], 1);
+   
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
