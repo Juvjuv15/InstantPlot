@@ -11,7 +11,7 @@ use App\Profile;
 use App\Notification;
 use DB;
 use Validator;
-use App\LotType;
+use App\lotType;
 use App\Lot;
 use App\Price;
 use App\PendingOwnedLot;

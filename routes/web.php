@@ -1,7 +1,7 @@
 <?php
 use App\Profile;
 use App\Lot;
-use App\LotType;
+use App\lotType;
 use App\Price;
 use App\Transaction;
 use App\Property;

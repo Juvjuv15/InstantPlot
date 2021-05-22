@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Lot;
-use App\LotType;
+use App\lotType;
 use App\User;
 use App\Profile;
 use App\sellLeasedTransaction;

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use App\User;
 use App\Profile;
 use App\Lot;
-use App\LotType;
+use App\lotType;
 use App\ConfirmedOwner;
 use App\Registeredemail;
 use App\Notification;

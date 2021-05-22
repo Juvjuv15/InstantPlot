@@ -14,7 +14,7 @@ use App\Property;
 use App\Lot;
 use App\User;
 use App\PendingOwnedLot;
-use App\LotType;
+use App\lotType;
 Use App\Price;
 use App\Usertrail;
 use App\Contract;
