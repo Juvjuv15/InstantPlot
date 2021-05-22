@@ -14,7 +14,7 @@ use App\Transaction;
 use App\Panoimage;
 use App\Lot;
 use App\User;
-use App\lotType;
+use App\LotType;
 use App\SellingType;
 use App\Document;
 use App\Profile;
