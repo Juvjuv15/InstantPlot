@@ -11,7 +11,7 @@ use App\Profile;
 use App\Notification;
 use DB;
 use Validator;
-use App\lotType;
+use App\LotType;
 use App\Lot;
 use App\Price;
 use App\PendingOwnedLot;
@@ -58,7 +58,7 @@ class LoginController extends Controller
                 }
                 Session::save();
                 
-                $lottype = lotType::distinct()->get(['lotType']); 
+                $lottype = LotType::distinct()->get(['lotType']); 
                 $price = Price::distinct()->get(['price']);
                 $sellers = Transaction::where([['user_fk',$id],['sellingType',"For Sale"]])->orderBy('created_at', 'desc')->whereNull('sellingStatus')->get();
                 $forsale = Transaction::where([['user_fk',$id],['sellingType',"For Sale"]])->orderBy('created_at', 'desc')->get();
