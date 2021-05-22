@@ -34,7 +34,7 @@ class BuyerController extends Controller
         if($usertype==0){
             $id=Auth::id();
             $picture = Profile::where('user_fk',$id)->first();
-            $lottype = lotType::distinct()->get(['lotType']); 
+            $lottype = LotType::distinct()->get(['lotType']); 
             $price = Price::distinct()->get(['price']);
             $ownedLots=Lot::join('properties','lots.lotId','=','properties.lotId')
             ->where('properties.user_fk',$id)
@@ -72,7 +72,7 @@ class BuyerController extends Controller
             $sellerpicture = Profile::where('user_fk',$user->user_fk)->first();
 
             $getuser=User::findorfail($user->user_fk);
-            $lottype = lotType::distinct()->get(['lotType']); 
+            $lottype = LotType::distinct()->get(['lotType']); 
             $price = Price::distinct()->get(['price']);
             $ownedLots=Lot::join('properties','lots.lotId','=','properties.lotId')
             ->where('properties.user_fk',$id)

@@ -156,7 +156,7 @@ class SellerController extends Controller
             $oldLotType = PendingOwnedLot::where('id',$pid)
             ->select('lotType')
             ->first();
-            $type = lotType::get();
+            $type = LotType::get();
             $lottype = $type->whereNotIn('lotType', $oldLotType);
             $lottype->all();
             $sellingType = SellingType::get();
@@ -296,7 +296,7 @@ class SellerController extends Controller
             ->select('lotType')
             ->where('lotId',$lotId)
             ->first();      
-            $type = lotType::get();
+            $type = LotType::get();
             $lottype = $type->whereNotIn('lotType', $oldLotType);
             $lottype->all();
 
@@ -1032,7 +1032,7 @@ class SellerController extends Controller
             ->where('transactions.tid',$tid)
             ->select('lotType')
             ->first();
-            $type = lotType::get();
+            $type = LotType::get();
             $lottype = $type->whereNotIn('lotType', $oldLotType);
             $lottype->all();
 
@@ -1359,7 +1359,7 @@ class SellerController extends Controller
             ->where('transactions.tid',$tid)
             ->select('lotType')
             ->first();
-            $type = lotType::get();
+            $type = LotType::get();
             $lottype = $type->whereNotIn('lotType', $oldLotType);
             $lottype->all();
 

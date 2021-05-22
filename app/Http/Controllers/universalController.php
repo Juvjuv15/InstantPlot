@@ -98,7 +98,7 @@ class universalController extends Controller
                 $post = $split['data'];
             }
             Session::save();
-            $lottype = lotType::distinct()->get(['lotType']); 
+            $lottype = LotType::distinct()->get(['lotType']); 
             $price = Price::distinct()->get(['price']);
             $sellers = Transaction::where('user_fk',$id)->orderBy('created_at', 'desc')->get();
             $sold=SoldLeasedLot::join("Transactions",'soldleasedlots.tid_fk',"=","Transactions.tid")

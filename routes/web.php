@@ -53,7 +53,7 @@ Route::get('/home', function () {
         $forsale = Transaction::where([['user_fk',$id],['sellingType',"For Sale"]])->orderBy('created_at', 'desc')->get();
         $forlease = Transaction::orWhere('sellingType',"For Lease")->where('user_fk',$id)->orderBy('created_at', 'desc')->get();
         // $forlease = Transaction::where([['user_fk',$id],['sellingType',"For Lease"]])->orWhere('sellingType',"For Rent")->orderBy('created_at', 'desc')->get();
-        // $lottype = lotType::distinct()->get(['lotType']); 
+        // $lottype = LotType::distinct()->get(['lotType']); 
         // $price = Price::distinct()->get(['price']);
         $data['pendingLot']=$pendingLots;
         // $data['propertysold']=$sold;

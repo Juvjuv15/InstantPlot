@@ -452,7 +452,7 @@ class adminController extends Controller{
             ->where('lotId',$lotId)
             ->first();
             $data['title']="UPDATE INFORMATION";
-            $type = lotType::get();
+            $type = LotType::get();
             $lottype = $type->whereNotIn('lotType', $oldLotType);
             $lottype->all();
             return view('admin/update',compact('lotRecord'))->with(['lotType'=>$lottype])->with(['picture'=>$picture])->with($data);
